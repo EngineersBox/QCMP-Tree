@@ -36,6 +36,8 @@ After you have done the pre-configuration, we start with the central point and w
 9. If the current node is a leaf node, insert the node according to the chosen branch
 10. Terminate the tree construction
 
+*Note: Possible revision to use relative positioning for node insertion instead of EUCD*
+
 ## Ray Casting with a QCMP Tree
 
 TODO
