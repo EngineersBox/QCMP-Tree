@@ -1,5 +1,5 @@
 # QCMP Tree
-Quadripartite Concentric Manhattan Partitioning (QCMP) tree is a 2D grid partitioning tree designed for direction agnostic ray casting and tracing
+Quadripartite Concentric Manhattan Partitioning (QCMP) tree is a 2D grid partitioning tree designed for efficient direction agnostic ray casting and tracing
 
 ## Term Glossary
 
