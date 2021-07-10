@@ -35,3 +35,7 @@ After you have done the pre-configuration, we start with the central point and w
 8. If the current node is not a leaf node traverse the chosen branch and repeat steps 5-9
 9. If the current node is a leaf node, insert the node according to the chosen branch
 10. Terminate the tree construction
+
+## Ray Casting with a QCMP Tree
+
+TODO
