@@ -24,6 +24,8 @@ In order to construct a QCMP tree, a certain set of pre-configurations need to b
 
 ### Construction
 
+#### V1
+
 After you have done the pre-configuration, we start with the central point and work through each of the filled cells in the concentric Manhattan diamonds. To start off, assign the central point to the root node of the tree. With each iteration perform the following:
 
 1. Iterate over the filled cells of the current Manhattan diamond
@@ -36,8 +38,34 @@ After you have done the pre-configuration, we start with the central point and w
 9. If the current node is a leaf node, insert the node according to the chosen branch
 10. Terminate the tree construction
 
-*Note: Possible revision to use relative positioning for node insertion instead of EUCD*
+#### V2
+
+TODO
 
 ## Ray Casting with a QCMP Tree
 
+### V1
+
 TODO
+
+### V2
+
+Variables:
+| Identifier | Description               |
+|------------|---------------------------|
+| `c`        | Current node in question  |
+| `r`        | Set of rays to be queried |
+| `q`        | Current branch            |
+| `p`        | Ray origin                |
+
+1. Set `c` to the root node
+2. Check for intersections with each ray in `r`
+3. Set `q` to the relative directional quadrant from `c`
+4. If `q` does not exist as a branch from `c`, set `q` to the quadrant closest in EUCD to `p`
+5. Traverse the `q` from `c`
+6. Set `c` to new node after traversal
+7. Check for intersections with each ray in `r`, store it temporarily
+8. If a new intersection is found check if there exists a branch in the direction from `c` to `p`
+9. If there is a branch traverse the next node and check if it is between `c` and `p`
+10. Repeat steps 8-9 until the closest node is found.
+11. Repeat steps 3-6 until all rays have closest intersections
